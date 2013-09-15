@@ -1,0 +1,141 @@
+@import "blueprint"
+@import "compass/css3"
+@import "compass/typography/lists/horizontal-list"
+@import "font-awesome.scss"
+
+body
+  background-color: white
+  font-family: 'Open Sans', 'Lucida Grande', tahoma, Verdana, 'Lucida Sans Unicode', 'Lucida Sans', Arial, sans-serif
+  font-size: 13px
+  line-height: 20.8px
+  padding-bottom: 20px
+  p, input, button, select, textarea
+    font-size: 1.1em
+  h1, h2, h3, h4, h5, legend
+    font-family: 'Ubuntu',  sans-serif
+    font-size: 1.3em
+    font-weight: normal
+    letter-spacing: +0.5px
+    margin-top: 20px
+    i
+      font-size: 0.7em
+  h1
+    display: none
+  #header
+    width: 100%
+    padding: 0
+    margin: 0
+    #header-container
+      margin: 0
+      padding: 10px
+      +container()
+      #logo
+        background: url("../img/logos/logo.png") no-repeat scroll 0px 0 transparent
+        display: inline-block
+        height: 70px
+        text-indent: -1000px
+        width: 200px
+        h1
+          display: block
+          height: 100%
+          width: 100%
+      #navbar
+        float: right
+        margin-top: 15px
+        font-size: 1.1em
+        overflow: visible
+        ul#nav
+          +horizontal-list
+          overflow: visible
+          font-size: 0.9em
+          li
+            display: inline-block
+            overflow: visible
+            float: left
+            width: auto
+            height: 70px
+            margin: 0
+            margin-right: 5px
+            padding:
+              right: 0
+              left: 0
+            &.current
+              background: url(../img/icons/active-topmenu.png) no-repeat center 30px
+            img
+              float: left
+              margin-right: 8px
+              margin-top: 2px
+            a
+              display: inline-block
+              outline: none
+              width: auto
+              color: black
+              text-decoration: none
+              text-align: center
+              padding: 7px 15px
+              border-radius: 5px
+              &:hover
+                background: #F7F7F7
+              &.current
+                color: white
+                background-color: #252525
+
+  #content
+    width: 100%
+    padding: 0
+    margin: 0
+    #content-top
+      +container()
+      padding: 10px
+      padding-left: 0px
+      button
+        background: white
+        color: black
+        border: 1px solid #DDDCDC
+        border-style: dotted
+        padding: 5px
+        cursor: pointer
+        &:hover
+          background: black
+          color: white
+    #content-container, .content-container
+      margin: 0
+      +container()
+      border: 1px solid #DDDCDC
+      border-radius: 5px 5px 5px 5px
+      border-style: dashed
+      padding: 10px
+      color: gray
+      ul
+        font-family: 'Open Sans', serif
+        margin-bottom: 15px
+        li
+          font-weight: 400
+          margin-left: 5px
+          margin-bottom: 5px
+          list-style: circle outside none
+          b
+            font-weight: 600
+            color: black
+      #search-content
+        display: none
+      #col1
+        float: left
+        font-size: 1.1em
+        line-height: 30px
+        margin-left: 90px
+        width: 400px
+
+      #col2
+        float: left
+        font-size: 2em
+        line-height: 35px
+        margin-left: 60px
+        margin-top: 100px
+        width: 300px
+        b
+          color: black
+          font-size: 1.2em
+        u
+          text-decoration: none
+          font-size: 0.7em
